@@ -1,0 +1,114 @@
+@taiwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .sidebar-icon {
+    @apply relative flex items-center justify-center h-12 w-12 mt-2 mb-2 mx-auto bg-blue-500 rounded-xl p-1 shadow-md hover:text-gray-200 hover:cursor-pointer hover:rounded-3xl transition-all duration-300 ease-in-out;
+  }
+
+  .tooltip {
+    @apply hidden absolute w-auto p-2 m-2 min-w-max left-16 rounded-md shadow-md bg-blue-600 text-sm font-bold ;
+  }
+
+  .navboton {
+    @apply  bg-blue-600 px-2 rounded-md pb-1 shadow-md hover:text-gray-300 hover:bg-blue-500 hover:cursor-pointer hover:rounded-full transition-all duration-200 ease-in-out;
+  }
+
+  .cursoCard {
+    @apply bg-blue-600 rounded-md shadow-md text-white  hover:cursor-pointer p-2 text-lg;
+  }
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+  overflow: hidden;
+  transition: all 200ms ease-in-out;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+}
+
+footer a:hover {
+  color: #c5c5c5;
+}
+
+.card-container {
+  margin-left: 20px;
+  margin-right: 20px;
+  display: grid;
+  gap: 1rem;
+  grid-auto-rows: 30rem;
+  grid-auto-flow: dense;
+  grid-template-columns: repeat(auto-fill, minmax(18.5rem, 2fr));
+}
+
+.cursoCard {
+  border: 1px solid rgb(25, 0, 255);
+  border-radius: 10px;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+  overflow: hidden;
+  transition: all 200ms ease-in-out;
+}
+
+.cursoCard:hover {
+  background-color: rgb(0, 140, 255);
+  transform: translateY(-5px);
+  transform: scale(1.1);
+  border-radius: 20px;
+  overflow: auto;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+
